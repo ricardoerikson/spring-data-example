@@ -1,7 +1,11 @@
 package spring.entity;
 
+import java.util.Collection;
+
 import javax.persistence.Embedded;
 import javax.persistence.Entity;
+
+import org.springframework.security.core.GrantedAuthority;
 
 @Entity
 public class UserProfile extends APersistence {
@@ -47,5 +51,17 @@ public class UserProfile extends APersistence {
     public void setPassword(String password) {
         this.password = password;
     }
+
+    public String getPasswordHash() {
+        // TODO Implement Password hash
+        return null;
+    }
+
+    public Collection<? extends GrantedAuthority> getAuthorities() {
+        // TODO Implement authorities
+        return null;
+    }
+    
+    
 
 }
